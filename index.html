@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <!-- <link rel="stylesheet" href="semantic.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="ui main " id="app">
+        <div class="ui secondary pointing menu">
+            <a href="" class="header item" style="font-size: 1.2em;">
+                TrustOnly
+            </a>
+            
+            <div class="right menu" style="display:flex; justify-content: space-around; align-items: center;">
+              <div>
+                <a href="" class="item">
+                    <i class="shopping cart icon"></i>
+                </a>
+              </div>
+              <div>
+                <div class="ui dropdown" style="margin-right: 30px;">
+                  <span>
+                    <i class="user circle icon" style="font-size: 15px;"></i>
+                    <i class="dropdown icon"></i>
+                  </span>
+                    <div class="menu">
+                      <div class="item">
+                       <p style="color:rgb(242, 19, 3)">Online</p>
+                      </div>
+                      <div class="item">
+                        Your Information
+                      </div>
+                      <div class="item">
+                        Setting
+                      </div>
+                      <div class="item">
+                        Log out
+                      </div>
+                      
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+          
+        <div class="ui four column doubling grid container">
+        <div class="column" v-for="prod in products">
+            <div class="ui card">
+                <div class="image">
+                  <img :src="prod.img">
+                </div>
+                <div class="content">
+                  <a class="header">{{prod.name}}</a>
+                  <div class="meta">
+                    <span class="date">{{prod.price}}</span>
+                  </div>
+                  <div class="content">
+                    <span class="right floated">
+                      <i class="heart outline like icon"></i>
+                      {{prod.likes}} likes
+                    </span>
+                    <i class="comment icon"></i>
+                     3 comments
+                  </div>
+                 
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+   
+    
+    
+
+
+    <!-- <script src="Js/vue.min.js"></script>
+    <script src="Js/semantic.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>   
+    <script src="Js/app.js"></script>
+    <script>
+        $('.ui.dropdown')
+         .dropdown();
+    </script>
+</body>
+</html>
