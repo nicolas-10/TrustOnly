@@ -2,6 +2,7 @@
 new Vue({
     el:'#app',
     data:{
+        online:true,
         products: [
             {
                 _id: "1",
